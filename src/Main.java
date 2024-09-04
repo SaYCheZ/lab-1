@@ -1,3 +1,5 @@
+import java.util.Date;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -25,5 +27,22 @@ public class Main {
         stock.setCurrentPrice(282.87);
 
         System.out.printf("\nПроцент изменения стоимости акций: %.2f%%\n", stock.getChangePercent());
+
+        long[] times = {
+                10000,
+                100000,
+                1000000,
+                10000000,
+                100000000,
+                1000000000,
+                10000000000L,
+                100000000000L
+        };
+        for (long time : times) {
+            Date date = new Date(time);
+            System.out.println("Time: " + time + " милисек с 1 Февраля, 1970, 00:00:00 GMT");
+            System.out.println("Date: " + date.toString());
+            System.out.println();
+        }
     }
 }
