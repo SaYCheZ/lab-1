@@ -18,5 +18,12 @@ public class Main {
         System.out.println("Height: " + rectangle2.getHeight());
         System.out.println("Area: " + rectangle2.getArea());
         System.out.println("Perimeter: " + rectangle2.getPerimeter());
+
+
+        Stock stock = new Stock("SBER", "ПАО Сбербанк");
+        stock.setPreviousClosingPrice(281.50);
+        stock.setCurrentPrice(282.87);
+
+        System.out.printf("\nПроцент изменения стоимости акций: %.2f%%\n", stock.getChangePercent());
     }
 }
